@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0.0",
+  "info": {
+    "title": "Microsoft Defender for Endpoint Advanced Hunting Add-on for Splunk",
+    "id": {
+      "group": null,
+      "name": "TA-microsoft-defender-for-endpoint-advanced-hunting-add-on-for-splunk",
+      "version": "1.0.0"
+    },
+    "author": [
+      {
+        "name": "Mikael Bjerkeland",
+        "email": null,
+        "company": null
+      }
+    ],
+    "releaseDate": null,
+    "description": "",
+    "classification": {
+      "intendedAudience": null,
+      "categories": [],
+      "developmentStatus": null
+    },
+    "commonInformationModels": null,
+    "license": {
+      "name": null,
+      "text": null,
+      "uri": null
+    },
+    "privacyPolicy": {
+      "name": null,
+      "text": null,
+      "uri": null
+    },
+    "releaseNotes": {
+      "name": null,
+      "text": null,
+      "uri": null
+    }
+  },
+  "dependencies": {
+  },
+  "tasks": [],
+  "inputGroups": {
+  },
+  "incompatibleApps": {
+  },
+  "platformRequirements": {
+    "splunk": {
+      "Enterprise": "*"
+    }
+  }
+}
