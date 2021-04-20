@@ -7,14 +7,16 @@ When setting the sourcetype/source choose either:
 * Source: azure_event_hub://Defender_Security_Center
 * Sourcetype: ms:defender:advancedhunting
 
+TODO: Find the right source for the MS Cloud Services Addon and add to props.conf and eventtypes.conf
+
 ## Data Models
 
 Endpoint Data Model Compatibility:
 
 | Dataset | Category | Status |
 |---|---|---|
-| Ports |  |  |
+| Ports | AdvancedHunting-DeviceNetworkEvents | Completed |
 | Processes | AdvancedHunting-DeviceProcessEvents | Completed |
-| Services |  |  |
-| Filesystem |  |  |
-| Registry |  |  |
+| Services |  | N/A |
+| Filesystem | AdvancedHunting-DeviceFileEvents | Completed |
+| Registry | AdvancedHunting-DeviceRegistryEvents | Completed |
