@@ -42,8 +42,8 @@ Schema reference: https://docs.microsoft.com/en-us/microsoft-365/security/defend
 ## Support
 
 This add-on is provided without official support, but is supported on a best-effort basis by the community.  
-Contributions and pull requests are more than welcome.
-Official Git repo: https://github.com/inspired/TA-microsoft-defender-for-endpoint-advanced-hunting-add-on-for-splunk
+Contributions and pull requests are more than welcome.   
+Official Git repository: https://github.com/inspired/TA-microsoft-365-defender-advanced-hunting-add-on-for-splunk
 
 ## Contact
 
