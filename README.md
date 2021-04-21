@@ -20,8 +20,8 @@ Future versions will include support for Microsoft Defender for Office 365, Micr
    * Microsoft Azure Add on for Splunk (https://splunkbase.splunk.com/app/3757/)
 
 4. When setting the sourcetype/source choose either:
-   * Source: `azure_event_hub://Defender_Security_Center` (If using Microsoft Azure Add-on for Splunk)
    * Sourcetype: `mscs:azure:eventhub:defender:advancedhunting` (If using Splunk Add-on for Microsoft Cloud Services)
+   * Source: `azure_event_hub://Defender_Security_Center` (If using Microsoft Azure Add-on for Splunk)
 
 5. Test that data is arriving by running the following search: `index=* eventtype="ms_defender_advanced_hunting_sourcetypes"`
 
