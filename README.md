@@ -8,8 +8,7 @@ Future versions will include support for Microsoft Defender for Office 365, Micr
 
 ## Installation
 
-Use the Splunk Add-on for Microsoft Cloud Services or Microsoft Azure Add-on for Splunk to ingest data.   
-Pick one of these two apps to ingest the data:
+Install and use one of these two Splunk add-ons to ingest the data:
 * Splunk Add-on for Microsoft Cloud Services (https://splunkbase.splunk.com/app/3110/)
 * Microsoft Azure Add on for Splunk (https://splunkbase.splunk.com/app/3757/)
 
