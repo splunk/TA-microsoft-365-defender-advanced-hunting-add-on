@@ -23,10 +23,10 @@ When setting the sourcetype/source choose either:
 Data Model Compatibility:
 
 | Product | Dataset | Category | Status |
-|---|---|---|
+|---|---|---|---|
 | MS Defender for Endpoint | Endpoint.Ports | AdvancedHunting-DeviceNetworkEvents | Completed |
 | MS Defender for Endpoint | Endpoint.Processes | AdvancedHunting-DeviceProcessEvents | Completed |
-| MS Defender for Endpoint | Endpoint.Services  | N/A |
+| MS Defender for Endpoint | Endpoint.Services | N/A |
 | MS Defender for Endpoint | Endpoint.Filesystem | AdvancedHunting-DeviceFileEvents | Completed |
 | MS Defender for Endpoint | Endpoint.Registry | AdvancedHunting-DeviceRegistryEvents | Completed |
 
