@@ -8,6 +8,11 @@ Future versions will include support for Microsoft Defender for Office 365, Micr
 
 ## Installation
 
+Configure Microsoft Defender for Endpoint to stream Advanced Hunting events to an Azure Event Hub:
+* https://docs.microsoft.com/en-us/microsoft-365/security/defender-endpoint/raw-data-export-event-hub?view=o365-worldwide
+
+Install this add-on on your Search Heads and Indexers
+
 Install and use one of these two Splunk add-ons to ingest the data:
 * Splunk Add-on for Microsoft Cloud Services (https://splunkbase.splunk.com/app/3110/)
 * Microsoft Azure Add on for Splunk (https://splunkbase.splunk.com/app/3757/)
@@ -15,7 +20,6 @@ Install and use one of these two Splunk add-ons to ingest the data:
 When setting the sourcetype/source choose either:
 * Source: azure_event_hub://Defender_Security_Center (If using Microsoft Azure Add-on for Splunk)
 * Sourcetype: mscs:azure:eventhub:defender:advancedhunting (If using Splunk Add-on for Microsoft Cloud Services)
-
 
 ## Data Models
 
