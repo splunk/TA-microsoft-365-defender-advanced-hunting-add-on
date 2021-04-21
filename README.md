@@ -4,7 +4,7 @@
 ## Introduction
 
 This add-on provides field extractions and CIM compatibility for the Endpoint datamodel for Microsoft 365 Defender Advanced Hunting data.   
-The data has is similar in content to Sysmon data and can be used by Detection Searches in i.e. Splunk Enterprise Security Content Update.   
+The data is similar in content to Sysmon data and can be used by Detection Searches in i.e. Splunk Enterprise Security Content Update.   
 
 Future versions will include support for Microsoft Defender for Office 365, Microsoft Defender for Identity and other products in the Microsoft 365 suite.
 
