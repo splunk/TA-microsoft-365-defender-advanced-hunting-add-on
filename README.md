@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This add-on provides field extractions and CIM compatibility against the Endpoint datamodel for Microsoft Defender for Endpoint Advanced Hunting data.
+This add-on provides field extractions and CIM compatibility for the Endpoint datamodel for Microsoft Defender for Endpoint Advanced Hunting data.
 
 ## Installation
 
@@ -27,6 +27,8 @@ Endpoint Data Model Compatibility:
 | Services |  | N/A |
 | Filesystem | AdvancedHunting-DeviceFileEvents | Completed |
 | Registry | AdvancedHunting-DeviceRegistryEvents | Completed |
+
+Schema reference: https://docs.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-schema-tables?view=o365-worldwide
 
 ## Support
 
