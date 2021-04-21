@@ -1,8 +1,10 @@
-# MS Defender for Endpoint Advanced Hunting Add-on for Splunk
+# Microsoft 365 Defender Advanced Hunting Add-on for Splunk
 
 ## Introduction
 
-This add-on provides field extractions and CIM compatibility for the Endpoint datamodel for Microsoft Defender for Endpoint Advanced Hunting data.
+This add-on provides field extractions and CIM compatibility for the Endpoint datamodel for Microsoft 365 Defender Advanced Hunting data.
+
+Future versions will include support for Microsoft Defender for Office 365, Microsoft Defender for Identity and other products in the Microsoft 365 suite.
 
 ## Installation
 
@@ -18,15 +20,15 @@ When setting the sourcetype/source choose either:
 
 ## Data Models
 
-Endpoint Data Model Compatibility:
+Data Model Compatibility:
 
-| Dataset | Category | Status |
+| Product | Dataset | Category | Status |
 |---|---|---|
-| Ports | AdvancedHunting-DeviceNetworkEvents | Completed |
-| Processes | AdvancedHunting-DeviceProcessEvents | Completed |
-| Services |  | N/A |
-| Filesystem | AdvancedHunting-DeviceFileEvents | Completed |
-| Registry | AdvancedHunting-DeviceRegistryEvents | Completed |
+| MS Defender for Endpoint | Endpoint.Ports | AdvancedHunting-DeviceNetworkEvents | Completed |
+| MS Defender for Endpoint | Endpoint.Processes | AdvancedHunting-DeviceProcessEvents | Completed |
+| MS Defender for Endpoint | Endpoint.Services  | N/A |
+| MS Defender for Endpoint | Endpoint.Filesystem | AdvancedHunting-DeviceFileEvents | Completed |
+| MS Defender for Endpoint | Endpoint.Registry | AdvancedHunting-DeviceRegistryEvents | Completed |
 
 Schema reference: https://docs.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-schema-tables?view=o365-worldwide
 
