@@ -1,13 +1,20 @@
 # MS Defender for Endpoint Advanced Hunting Add-on for Splunk
 
+## Introduction
+
+This add-on provides field extractions and CIM compatibility against the Endpoint datamodel for Microsoft Defender for Endpoint Advanced Hunting data.
+
 ## Installation
 
 Use the Splunk Add-on for Microsoft Cloud Services or Microsoft Azure Add-on for Splunk to ingest data.   
-When setting the sourcetype/source choose either:
-* Source: azure_event_hub://Defender_Security_Center
-* Sourcetype: ms:defender:advancedhunting
+Pick one of these two apps to ingest the data:
+* Splunk Add-on for Microsoft Cloud Services (https://splunkbase.splunk.com/app/3110/)
+* Microsoft Azure Add on for Splunk (https://splunkbase.splunk.com/app/3757/)
 
-TODO: Find the right source for the MS Cloud Services Addon and add to props.conf and eventtypes.conf
+When setting the sourcetype/source choose either:
+* Source: azure_event_hub://Defender_Security_Center (If using Microsoft Azure Add-on for Splunk)
+* Sourcetype: mscs:azure:eventhub:defender:advancedhunting (If using Splunk Add-on for Microsoft Cloud Services)
+
 
 ## Data Models
 
@@ -20,3 +27,13 @@ Endpoint Data Model Compatibility:
 | Services |  | N/A |
 | Filesystem | AdvancedHunting-DeviceFileEvents | Completed |
 | Registry | AdvancedHunting-DeviceRegistryEvents | Completed |
+
+## Support
+
+This add-on is provided without official support, but is supported on a best-effort basis by the community.  
+Contributions and pull requests are more than welcome.
+Official Git repo: https://github.com/inspired/TA-microsoft-defender-for-endpoint-advanced-hunting-add-on-for-splunk
+
+## Contact
+
+Authored by Mikael Bjerkeland (mbjerkeland@splunk.com)
