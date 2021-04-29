@@ -9,12 +9,15 @@ The data is similar in content to Sysmon data and can be used by Detection Searc
 Future versions may include support for Microsoft Defender for Office 365, Microsoft Defender for Identity and other products in the Microsoft 365 suite.
 
 
-### How is this different to the Microsoft 365 Defender Add-on for Splunk
+### How is this different from other Microsoft Defender Add-ons for Splunk?
 The differences between [Microsoft 365 Defender Add-on for Splunk](https://splunkbase.splunk.com/app/4959/) and this TA are:
+* The above uses REST API to get data, and the REST API is rate limited, whereas this TA uses Event Hub
+* The above will only give you Alerts and Incidents, not the raw logs
+* The above maps to the Alerts CIM data model, not the Endpoint CIM data model
 
-* Microsoft 365 Defender Add-on for Splunk uses REST API to get data, whereas this TA uses Event Hub
-* Microsoft 365 Defender Add-on for Splunk will only give you Alerts and Incidents, not the raw logs
-* Microsoft 365 Defender Add-on for Splunk maps to the Alerts CIM data model, not the Endpoint CIM data model
+The differences between [TA for Defender ATP hunting API](https://splunkbase.splunk.com/app/4623/#/details) and this TA are:
+* The above uses REST API to pull similar data at intervals, and the REST API is rate limited
+* The above is not CIM compliant
 
 
 ## Installation
