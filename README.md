@@ -133,3 +133,4 @@ Official Git repository: https://github.com/inspired/TA-microsoft-365-defender-a
 ## Contact
 
 Authored by Mikael Bjerkeland (mbjerkeland@splunk.com)
+Contributors: Thomas Hillesøy
