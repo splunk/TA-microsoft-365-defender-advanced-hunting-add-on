@@ -5,7 +5,7 @@
     "id": {
       "group": null,
       "name": "TA-microsoft-365-defender-advanced-hunting-add-on-for-splunk",
-      "version": "1.1.0"
+      "version": "1.1.2"
     },
     "author": [
       {
