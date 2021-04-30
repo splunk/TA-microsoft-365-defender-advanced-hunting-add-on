@@ -15,9 +15,13 @@ The differences between [Microsoft 365 Defender Add-on for Splunk](https://splun
 * The above will only give you Alerts and Incidents, not the raw logs
 * The above maps to the Alerts CIM data model, not the Endpoint CIM data model
 
+My advice: Use Microsoft 365 Defender Advanced Hunting Add-on and Microsoft 365 Defender Add-on for Splunk, in order to get both alerts and the raw logs!
+
 The differences between [TA for Defender ATP hunting API](https://splunkbase.splunk.com/app/4623/#/details) and this TA are:
 * The above uses REST API to pull similar data at intervals, and the REST API is rate limited
 * The above is not CIM compliant
+
+You should not need this TA!
 
 
 ## Installation
