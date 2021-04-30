@@ -10,18 +10,18 @@ Future versions may include support for Microsoft Defender for Office 365, Micro
 
 
 ### How is this different from other Microsoft Defender Add-ons for Splunk?
-The differences between [Microsoft 365 Defender Add-on for Splunk](https://splunkbase.splunk.com/app/4959/) and this TA are:
+#### [Microsoft 365 Defender Add-on for Splunk](https://splunkbase.splunk.com/app/4959/)
 * The above uses REST API to get data, and the REST API is rate limited, whereas this TA uses Event Hub
 * The above will only give you Alerts and Incidents, not the raw logs
 * The above maps to the Alerts CIM data model, not the Endpoint CIM data model
 
-My advice: Use Microsoft 365 Defender Advanced Hunting Add-on and Microsoft 365 Defender Add-on for Splunk, in order to get both alerts and the raw logs!
+My advice: Use both Microsoft 365 Defender Advanced Hunting Add-on and Microsoft 365 Defender Add-on for Splunk, in order to get both alerts and the raw logs!
 
-The differences between [TA for Defender ATP hunting API](https://splunkbase.splunk.com/app/4623/#/details) and this TA are:
+#### [TA for Defender ATP hunting API](https://splunkbase.splunk.com/app/4623/#/details)
 * The above uses REST API to pull similar data at intervals, and the REST API is rate limited
 * The above is not CIM compliant
 
-You should not need this TA!
+My advice: You should not need this TA if you are using Microsoft 365 Defender Advanced Hunting Add-on for Splunk.
 
 
 ## Installation
