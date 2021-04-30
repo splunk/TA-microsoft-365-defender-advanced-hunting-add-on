@@ -139,4 +139,5 @@ Official Git repository: https://github.com/inspired/TA-microsoft-365-defender-a
 Authored by Mikael Bjerkeland (mbjerkeland@splunk.com).  
 
 ### Contributors
+* Mikael Bjerkeland (Splunk)
 * Thomas Hillesøy (Sens Consulting)
