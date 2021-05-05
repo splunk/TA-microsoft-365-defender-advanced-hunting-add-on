@@ -4,7 +4,7 @@
     "title": "Microsoft 365 Defender Advanced Hunting Add-on for Splunk",
     "id": {
       "group": null,
-      "name": "TA-microsoft-365-defender-advanced-hunting-add-on-for-splunk",
+      "name": "TA-microsoft-365-defender-advanced-hunting-add-on",
       "version": "1.1.2"
     },
     "author": [
