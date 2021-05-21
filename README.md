@@ -3,7 +3,7 @@
 
 ## Introduction
 
-This add-on provides field extractions and CIM compatibility for the Endpoint datamodel for Microsoft 365 Defender Advanced Hunting data.   
+This add-on provides field extractions and CIM compatibility for the Endpoint datamodel for Microsoft Defender Advanced Hunting data.   
 It also maps Device Alert events to the Alerts datamodel.   
 The data is similar in content to Sysmon data and can be used by Detection Searches in i.e. Splunk Enterprise Security Content Update.   
 
@@ -16,13 +16,13 @@ Future versions may include support for Microsoft Defender for Office 365, Micro
 * The above will only give you Alerts and Incidents, not the raw logs
 * The above maps to the Alerts CIM data model, not the Endpoint CIM data model
 
-My advice: Use both Microsoft 365 Defender Advanced Hunting Add-on and Microsoft 365 Defender Add-on for Splunk, in order to get both alerts and the raw logs!
+My advice: Use both Microsoft Defender Advanced Hunting Add-on and Microsoft 365 Defender Add-on for Splunk, in order to get both alerts and the raw logs!
 
 #### [TA for Defender ATP hunting API](https://splunkbase.splunk.com/app/4623/#/details)
 * The above uses REST API to pull similar data at intervals, and the REST API is rate limited
 * The above is not CIM compliant
 
-My advice: You should not need this TA if you are using Microsoft 365 Defender Advanced Hunting Add-on for Splunk.
+My advice: You should not need this TA if you are using Microsoft Defender Advanced Hunting Add-on for Splunk.
 
 
 ## Installation
@@ -134,7 +134,7 @@ So how does this data look like when it's ingested into Splunk? Prettified, of c
 
 This add-on is provided without official support, but is supported on a best-effort basis by the community.  
 Contributions and pull requests are more than welcome.   
-Official Git repository: https://github.com/inspired/TA-microsoft-365-defender-advanced-hunting-add-on-for-splunk
+Git repository: https://github.com/splunk/TA-microsoft-365-defender-advanced-hunting-add-on-for-splunk
 
 ## Contact
 
