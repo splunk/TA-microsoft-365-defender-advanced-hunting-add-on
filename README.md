@@ -134,7 +134,7 @@ So how does this data look like when it's ingested into Splunk? Prettified, of c
 
 This add-on is provided without official support, but is supported on a best-effort basis by the community.  
 Contributions and pull requests are more than welcome.   
-Git repository: https://github.com/splunk/TA-microsoft-365-defender-advanced-hunting-add-on-for-splunk
+Git repository: https://github.com/splunk/TA-microsoft-365-defender-advanced-hunting-add-on
 
 ## Contact
 
@@ -143,3 +143,19 @@ Authored by Mikael Bjerkeland (mbjerkeland@splunk.com).
 ### Contributors
 * Mikael Bjerkeland (Splunk)
 * Thomas Hillesøy (Sens Consulting)
+
+## Copyright
+
+Copyright 2021 Splunk Inc.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
