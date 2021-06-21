@@ -131,6 +131,52 @@ So how does this data look like when it's ingested into Splunk? Prettified, of c
   }
 }
 ```
+
+```json
+{  
+   "Tenant": "DefaultTenant",
+   "category": "AdvancedHunting-EmailEvents",
+   "operationName": "Publish",
+   "properties": { 
+     "AttachmentCount": 0,
+     "ConfidenceLevel": {"Phish":"Normal","Spam":"Moderate"},
+     "Connectors": null,
+     "DeliveryAction": "Junked",
+     "DeliveryLocation": "Junk folder",
+     "DetectionMethods": {"Phish":["Spoof external domain"],"Spam":["Advanced filter"]},
+     "EmailAction": "Move to junk mail folder",
+     "EmailActionPolicy": "Anti-phishing spoof",
+     "EmailActionPolicyGuid": "3c810b43-bc2c-4e2a-8a8f-113b5ba6a790",
+     "EmailClusterId": 2887796428,
+     "EmailDirection": "Inbound",
+     "EmailLanguage": "en",
+     "InternetMessageId": "<1624300224965.52303495.145763391.18243936023@abcsend.com>",
+     "NetworkMessageId": "1ecd7b63-c817-437f-a571-2615776a3eb9",
+     "OrgLevelAction": null,
+     "OrgLevelPolicy": null,
+     "RecipientEmailAddress": "charlie.brown@splunk.com",
+     "RecipientObjectId": "0075753e-5633-4063-9ccd-00631a7b8073",
+     "ReportId": "1ecd7b63-c817-437f-a571-2615776a3eb9-14781866014961308009-1",
+     "SenderDisplayName": "Charles Schultz",
+     "SenderFromAddress": "snoopy@peanuts.org",
+     "SenderFromDomain": "peanuts.org",
+     "SenderIPv4": "142.21.91.241",
+     "SenderIPv6": null,
+     "SenderMailFromAddress": "bounce@peanuts.org",
+     "SenderMailFromDomain": "peanuts.org",
+     "SenderObjectId": null,
+     "Subject": "Need dogfood ASAP? click here!",
+     "ThreatNames": null,
+     "ThreatTypes": "Phish, Spam",
+     "Timestamp": "2021-06-21T18:34:06Z",
+     "UrlCount": 10,
+     "UserLevelAction": null,
+     "UserLevelPolicy": null,
+   },
+   "tenantId": "fd794b87-38b3-41bf-8055-1a790cf2efd4",
+   "time": "2021-06-21T18:39:44.2979096Z"
+}
+```
 ## Support
 
 This add-on is provided without official support, but is supported on a best-effort basis by the community.  
