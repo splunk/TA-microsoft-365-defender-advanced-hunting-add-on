@@ -54,7 +54,7 @@ Data Model Compatibility:
 | MS Defender for Endpoint | Endpoint.Filesystem | AdvancedHunting-DeviceFileEvents | Completed |
 | MS Defender for Endpoint | Endpoint.Registry | AdvancedHunting-DeviceRegistryEvents | Completed |
 | MS Defender for Endpoint | Alerts | AdvancedHunting-DeviceAlertEvents | Completed |
-| MS Defender for Endpoint | Email | AdvancedHunting-[EmailEvents,EmailAttachmentInfo] | Completed |
+| MS Defender for Endpoint | Email | AdvancedHunting-EmailEvents <br/>AdvancedHunting-EmailAttachmentInfo | Completed |
 
 Schema reference: https://docs.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-schema-tables?view=o365-worldwide
 
