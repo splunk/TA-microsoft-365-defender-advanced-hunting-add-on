@@ -177,6 +177,70 @@ So how does this data look like when it's ingested into Splunk? Prettified, of c
    "time": "2021-06-21T18:39:44.2979096Z"
 }
 ```
+
+```json
+{
+  "time": "2021-09-12T17:13:58.0041354Z",
+  "tenantId": "2f6f2e73-daa8-4198-8b75-748a977c6016",
+  "operationName": "Publish",
+  "category": "AdvancedHunting-AlertInfo",
+  "properties": {
+    "AlertId": "da637670636373905367_-2042055267",
+    "Timestamp": "2021-09-12T16:36:48.7090029Z",
+    "Title": "Suspicious process injection observed",
+    "ServiceSource": "Microsoft Defender for Endpoint",
+    "Category": "DefenseEvasion",
+    "Severity": "Medium",
+    "DetectionSource": "EDR",
+    "MachineGroup": null,
+    "AttackTechniques": "[\"Process Injection (T1055)\",\"Portable Executable Injection (T1055.002)\"]"
+  }
+}
+```
+
+```json
+{
+  "time": "2021-09-12T17:13:58.5882514Z",
+  "tenantId": "2f6f2e73-daa8-4198-8b75-748a977c6016",
+  "operationName": "Publish",
+  "category": "AdvancedHunting-AlertEvidence",
+  "properties": {
+    "AlertId": "da637670636373905367_-2042055267",
+    "ServiceSource": "Microsoft Defender for Endpoint",
+    "Timestamp": "2021-09-12T16:36:48.7090029Z",
+    "EntityType": "Machine",
+    "EvidenceRole": "Impacted",
+    "SHA1": null,
+    "SHA256": null,
+    "ThreatFamily": null,
+    "RemoteIP": null,
+    "LocalIP": null,
+    "RemoteUrl": null,
+    "AdditionalFields": "{\"$id\":\"1\",\"HostName\":\"win-dspitz\",\"IsDomainJoined\":false,\"Type\":\"host\",\"MachineId\":\"a119946e5cbc8a4c5bde193bb12347c62a6dd3e8\",\"MachineIdType\":3,\"IsIoc\":false}",
+    "AccountName": null,
+    "AccountDomain": null,
+    "AccountSid": null,
+    "AccountObjectId": null,
+    "DeviceId": "a119946e5cbc8a4c5bde193bb12347c62a6dd3e8",
+    "DeviceName": "win-dspitz",
+    "NetworkMessageId": null,
+    "EvidenceDirection": null,
+    "MachineGroup": null,
+    "FileName": null,
+    "FolderPath": null,
+    "ProcessCommandLine": null,
+    "EmailSubject": null,
+    "ApplicationId": null,
+    "Application": null,
+    "FileSize": null,
+    "RegistryKey": null,
+    "RegistryValueName": null,
+    "RegistryValueData": null,
+    "AccountUpn": null,
+    "OAuthApplicationId": null
+  }
+}
+```
 ## Support
 
 This add-on is provided without official support, but is supported on a best-effort basis by the community.  
