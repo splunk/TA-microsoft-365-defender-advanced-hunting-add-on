@@ -60,6 +60,23 @@ Data Model Compatibility:
 
 Schema reference: https://docs.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-schema-tables?view=o365-worldwide
 
+## Malware Data Model
+TODO Saved Search
+```
+index=* sourcetype="mscs:azure:eventhub:defender:advancedhunting" category IN ("AdvancedHunting-AlertInfo", "AdvancedHunting-AlertEvidence")
+| eval category="unknown"
+| eval tuple=file_hash . "#:#:#" . file_name . "#:#:#" . file_path
+| stats first(action) AS action first(category) AS category first(dest) AS dest values(tuple) AS tuple first(severity) AS severity first(signature) AS signature first(src) AS src first(src_user) AS src_user first(user) AS user first(vendor_product) AS vendor_product first(_time) AS time BY id
+| mvexpand tuple
+| eval file_hash=mvindex(split(tuple,"#:#:#"),0)
+| eval file_name=mvindex(split(tuple,"#:#:#"),1)
+| eval file_path=mvindex(split(tuple,"#:#:#"),2)
+| fields - tuple
+| tojson
+| fields _raw
+| collect sourcetype=defender:advancedhunting:malware addtime=f
+```
+
 ## Data Samples
 
 So how does this data look like when it's ingested into Splunk? Prettified, of course:
