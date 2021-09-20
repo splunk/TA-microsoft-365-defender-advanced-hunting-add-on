@@ -55,7 +55,7 @@ Data Model Compatibility:
 | MS Defender for Endpoint | Endpoint.Registry | AdvancedHunting-DeviceRegistryEvents | Completed |
 | MS Defender for Endpoint | Alerts | AdvancedHunting-DeviceAlertEvents <br/> AdvancedHunting-AlertInfo <br/>AdvancedHunting-AlertEvidence | Completed |
 | MS Defender for Endpoint | Email | AdvancedHunting-EmailEvents <br/>AdvancedHunting-EmailAttachmentInfo | Completed |
-| MS Defender for Endpoint | Malware | AdvancedHunting-AlertInfo <br/>AdvancedHunting-AlertEvidence | WIP |
+| MS Defender for Endpoint | Malware | AdvancedHunting-AlertInfo <br/>AdvancedHunting-AlertEvidence | Completed |
 
 
 Schema reference: https://docs.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-schema-tables?view=o365-worldwide
@@ -63,17 +63,43 @@ Schema reference: https://docs.microsoft.com/en-us/microsoft-365/security/defend
 ## Malware Data Model
 TODO Saved Search
 ```
-index=* sourcetype="mscs:azure:eventhub:defender:advancedhunting" category IN ("AdvancedHunting-AlertInfo", "AdvancedHunting-AlertEvidence")
-| eval category="unknown"
-| eval tuple=file_hash . "#:#:#" . file_name . "#:#:#" . file_path
-| stats first(action) AS action first(category) AS category first(dest) AS dest values(tuple) AS tuple first(severity) AS severity first(signature) AS signature first(src) AS src first(src_user) AS src_user first(user) AS user first(vendor_product) AS vendor_product first(_time) AS time BY id
-| mvexpand tuple
-| eval file_hash=mvindex(split(tuple,"#:#:#"),0)
-| eval file_name=mvindex(split(tuple,"#:#:#"),1)
-| eval file_path=mvindex(split(tuple,"#:#:#"),2)
-| fields - tuple
-| tojson
-| fields _raw
+[Summary - Defender Advanced Hunting Malware Summary]
+action.keyindicator.invert = 0
+action.makestreams.param.verbose = 0
+action.nbtstat.param.verbose = 0
+action.notable.param.verbose = 0
+action.nslookup.param.verbose = 0
+action.ping.param.verbose = 0
+action.risk.forceCsvResults = 1
+action.risk.param.verbose = 0
+action.send2uba.param.verbose = 0
+action.threat_add.param.verbose = 0
+alert.severity = 1
+alert.suppress = 0
+alert.track = 0
+counttype = number of events
+cron_schedule = */10 * * * *
+description = Summary generating search in order to populate Malware DM compatible events based on AlertInfo and AlertEvidence events
+dispatch.earliest_time = -15m
+dispath.latest_time = -5m
+enableSched = 1
+quantity = 0
+realtime_schedule = 0
+relation = greater than
+search = index=* sourcetype="mscs:azure:eventhub:defender:advancedhunting" category IN ("AdvancedHunting-AlertInfo", "AdvancedHunting-AlertEvidence")\
+| eval category="unknown"\
+| eval tuple=file_hash . "#:#:#" . file_name . "#:#:#" . file_path\
+| stats first(action) AS action first(category) AS category first(dest) AS dest values(tuple) AS tuple first(severity) AS severity first(signature) AS signature first(src) AS src first(src_user) AS src_user first(user) AS user first(vendor_product) AS vendor_product first(_time) AS time BY id\
+| mvexpand tuple\
+| eval file_hash=mvindex(split(tuple,"#:#:#"),0)\
+| eval file_name=mvindex(split(tuple,"#:#:#"),1)\
+| eval file_path=mvindex(split(tuple,"#:#:#"),2)\
+| rex field=signature "'(?<signature_name>.+)' (?<category_name>.+) was"\
+| eval category=coalesce(category_name,category)\
+| eval signature=coalesce(signature_name,"unknown")\
+| fields - tuple category_name signature_name\
+| tojson\
+| fields _raw\
 | collect sourcetype=defender:advancedhunting:malware addtime=f
 ```
 
