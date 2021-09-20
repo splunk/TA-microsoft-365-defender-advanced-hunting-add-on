@@ -40,7 +40,11 @@ My advice: You should not need this TA if you are using Microsoft Defender Advan
    * Sourcetype: `mscs:azure:eventhub:defender:advancedhunting` (If using Splunk Add-on for Microsoft Cloud Services)
    * Source: `azure_event_hub://Defender_Security_Center` (If using Microsoft Azure Add-on for Splunk)
 
-5. Test that data is arriving by running the following search: `index=* eventtype="ms_defender_advanced_hunting_sourcetypes"`
+6. Enable the scheduled saved search **Summary - Defender Advanced Hunting Malware Summary** on one Search Head (preferably ES) in order to populate the Malware data model.
+
+7. Verify that raw data is arriving by running the following search: `index=* eventtype="ms_defender_advanced_hunting_sourcetypes"`
+
+8. Verify that data for the **Malware** data model is populated by the scheduled saved search by running the following search: `index* sourcetype=defender:advancedhunting:malware`
 
 ## Data Models
 
@@ -59,49 +63,6 @@ Data Model Compatibility:
 
 
 Schema reference: https://docs.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-schema-tables?view=o365-worldwide
-
-## Malware Data Model
-TODO Saved Search
-```
-[Summary - Defender Advanced Hunting Malware Summary]
-action.keyindicator.invert = 0
-action.makestreams.param.verbose = 0
-action.nbtstat.param.verbose = 0
-action.notable.param.verbose = 0
-action.nslookup.param.verbose = 0
-action.ping.param.verbose = 0
-action.risk.forceCsvResults = 1
-action.risk.param.verbose = 0
-action.send2uba.param.verbose = 0
-action.threat_add.param.verbose = 0
-alert.severity = 1
-alert.suppress = 0
-alert.track = 0
-counttype = number of events
-cron_schedule = */10 * * * *
-description = Summary generating search in order to populate Malware DM compatible events based on AlertInfo and AlertEvidence events
-dispatch.earliest_time = -15m
-dispath.latest_time = -5m
-enableSched = 1
-quantity = 0
-realtime_schedule = 0
-relation = greater than
-search = index=* sourcetype="mscs:azure:eventhub:defender:advancedhunting" category IN ("AdvancedHunting-AlertInfo", "AdvancedHunting-AlertEvidence")\
-| eval category="unknown"\
-| eval tuple=file_hash . "#:#:#" . file_name . "#:#:#" . file_path\
-| stats first(action) AS action first(category) AS category first(dest) AS dest values(tuple) AS tuple first(severity) AS severity first(signature) AS signature first(src) AS src first(src_user) AS src_user first(user) AS user first(vendor_product) AS vendor_product first(_time) AS time BY id\
-| mvexpand tuple\
-| eval file_hash=mvindex(split(tuple,"#:#:#"),0)\
-| eval file_name=mvindex(split(tuple,"#:#:#"),1)\
-| eval file_path=mvindex(split(tuple,"#:#:#"),2)\
-| rex field=signature "'(?<signature_name>.+)' (?<category_name>.+) was"\
-| eval category=coalesce(category_name,category)\
-| eval signature=coalesce(signature_name,"unknown")\
-| fields - tuple category_name signature_name\
-| tojson\
-| fields _raw\
-| collect sourcetype=defender:advancedhunting:malware addtime=f
-```
 
 ## Data Samples
 
@@ -284,6 +245,22 @@ So how does this data look like when it's ingested into Splunk? Prettified, of c
     "AccountUpn": null,
     "OAuthApplicationId": null
   }
+}
+```
+
+```json
+{
+  "action": "unknown",
+  "category": "credential theft malware",
+  "dest": "win-dspitz",
+  "file_hash": "15c8ecf4e91a523333193e95f7a5b9729ea6142c",
+  "file_name": "mimikatz-1.bat",
+  "file_path": "C:\\temp\\APTSimulator-master\\APTSimulator-master\\test-sets\\credential-access",
+  "id": "da637674644562536345_-97009046",
+  "severity": "low",
+  "signature": "Populf",
+  "time": 1631867656.623709,
+  "vendor_product": "Microsoft Defender for Endpoint"
 }
 ```
 ## Support
