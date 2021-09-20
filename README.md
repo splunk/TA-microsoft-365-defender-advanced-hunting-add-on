@@ -30,7 +30,7 @@ My advice: You should not need this TA if you are using Microsoft Defender Advan
 1. Configure Microsoft Defender for Endpoint to stream Advanced Hunting events to an Azure Event Hub:
    *  https://docs.microsoft.com/en-us/microsoft-365/security/defender-endpoint/raw-data-export-event-hub?view=o365-worldwide
 
-2. Install this add-on on your Search Heads and Indexers
+2. Install this add-on on your Search Heads, Indexers and Heavy Forwarders (if part of your data collection topology)
 
 3. Install and use one of these two Splunk add-ons to ingest the data:
    * Splunk Add-on for Microsoft Cloud Services (https://splunkbase.splunk.com/app/3110/)
