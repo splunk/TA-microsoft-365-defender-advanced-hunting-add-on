@@ -32,13 +32,11 @@ My advice: You should not need this TA if you are using Microsoft Defender Advan
 
 2. Install this add-on on your Search Heads, Indexers and Heavy Forwarders (if part of your data collection topology)
 
-3. Install and use one of these two Splunk add-ons to ingest the data:
-   * Splunk Add-on for Microsoft Cloud Services (https://splunkbase.splunk.com/app/3110/)
-   * Microsoft Azure Add on for Splunk (https://splunkbase.splunk.com/app/3757/)
+3. Install and use this Splunk add-on to ingest the data:
+   * Splunk Add-on for Microsoft Cloud Services (https://splunkbase.splunk.com/app/3110/) version 4.3.3+
 
-4. When setting the sourcetype/source choose either:
-   * Sourcetype: `mscs:azure:eventhub:defender:advancedhunting` (If using Splunk Add-on for Microsoft Cloud Services)
-   * Source: `azure_event_hub://Defender_Security_Center` (If using Microsoft Azure Add-on for Splunk)
+4. When setting the sourcetype/source choose:
+   * Sourcetype: `mscs:azure:eventhub:defender:advancedhunting`
 
 6. Enable the scheduled saved search **Summary - Defender Advanced Hunting Malware Summary** on one Search Head (preferably ES) in order to populate the Malware data model.
 
