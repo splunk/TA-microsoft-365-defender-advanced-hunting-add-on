@@ -29,13 +29,14 @@ My advice: You should not need this TA if you are using Microsoft Defender Advan
 
 1. Configure Microsoft Defender for Endpoint to stream Advanced Hunting events to an Azure Event Hub:
    *  https://docs.microsoft.com/en-us/microsoft-365/security/defender-endpoint/raw-data-export-event-hub?view=o365-worldwide
+   *  Use a separate Event Hub Name for Advanced Hunting data. Don't mix this data with other types of data. Failing to do so will render this Add-on useless
 
 2. Install this add-on on your Search Heads, Indexers and Heavy Forwarders (if part of your data collection topology)
 
 3. Install and use this Splunk add-on to ingest the data:
    * Splunk Add-on for Microsoft Cloud Services (https://splunkbase.splunk.com/app/3110/) version 4.3.3+
 
-4. When setting the sourcetype/source choose:
+4. When setting the up the input, enter:
    * Sourcetype: `mscs:azure:eventhub:defender:advancedhunting`
 
 6. Enable the scheduled saved search **Summary - Defender Advanced Hunting Malware Summary** on one Search Head (preferably ES) in order to populate the Malware data model.
