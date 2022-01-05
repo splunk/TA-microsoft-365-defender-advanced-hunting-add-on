@@ -277,6 +277,7 @@ Authored by Mikael Bjerkeland (mbjerkeland@splunk.com).
 ### Contributors
 * Mikael Bjerkeland (Splunk)
 * Thomas Hillesøy (Sens Consulting)
+* Denver Spitz (Splunk)
 
 ## Copyright
 
