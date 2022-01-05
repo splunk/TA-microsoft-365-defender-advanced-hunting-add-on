@@ -49,18 +49,18 @@ My advice: You should not need this TA if you are using Microsoft Defender Advan
 
 Data Model Compatibility:
 
-| Product | Dataset | Category | Status |
-|---|---|---|---|
-| MS Defender for Endpoint | Endpoint.Ports | AdvancedHunting-DeviceNetworkEvents | Completed |
-| MS Defender for Endpoint | Endpoint.Processes | AdvancedHunting-DeviceProcessEvents | Completed |
-| MS Defender for Endpoint | Endpoint.Services | N/A |
-| MS Defender for Endpoint | Endpoint.Filesystem | AdvancedHunting-DeviceFileEvents | Completed |
-| MS Defender for Endpoint | Endpoint.Registry | AdvancedHunting-DeviceRegistryEvents | Completed |
-| MS Defender for Endpoint | Alerts | AdvancedHunting-DeviceAlertEvents <br/> AdvancedHunting-AlertInfo <br/>AdvancedHunting-AlertEvidence | Completed |
-| MS Defender for Endpoint | Email | AdvancedHunting-EmailEvents <br/>AdvancedHunting-EmailAttachmentInfo | Completed |
-| MS Defender for Endpoint | Malware | AdvancedHunting-AlertInfo <br/>AdvancedHunting-AlertEvidence | Completed |
-| MS Defender for Endpoint | Authentication | AdvancedHunting-IdentityLogonEvents <br/>AdvancedHunting-DeviceLogonEvents | Under Consideration |
-| MS Defender for Endpoint | Change | AdvancedHunting-IdentityDirectoryEvents | Under Consideration |
+| Product | Dataset | Category | Status | Special Instructions |
+|---|---|---|---|---|
+| MS Defender for Endpoint | Endpoint.Ports | AdvancedHunting-DeviceNetworkEvents | Completed | |
+| MS Defender for Endpoint | Endpoint.Processes | AdvancedHunting-DeviceProcessEvents | Completed | |
+| MS Defender for Endpoint | Endpoint.Services | N/A | |
+| MS Defender for Endpoint | Endpoint.Filesystem | AdvancedHunting-DeviceFileEvents | Completed | |
+| MS Defender for Endpoint | Endpoint.Registry | AdvancedHunting-DeviceRegistryEvents | Completed | |
+| MS Defender for Endpoint | Alerts | AdvancedHunting-DeviceAlertEvents <br/> AdvancedHunting-AlertInfo <br/>AdvancedHunting-AlertEvidence | Completed | |
+| MS Defender for Endpoint | Email | AdvancedHunting-EmailEvents <br/>AdvancedHunting-EmailAttachmentInfo | Completed | Enable saved search **Summary - Defender Advanced Hunting Email Summary** |
+| MS Defender for Endpoint | Malware | AdvancedHunting-AlertInfo <br/>AdvancedHunting-AlertEvidence | Completed | Enable saved search **Summary - Defender Advanced Hunting Malware Summary** |
+| MS Defender for Endpoint | Authentication | AdvancedHunting-IdentityLogonEvents <br/>AdvancedHunting-DeviceLogonEvents | Under Consideration | |
+| MS Defender for Endpoint | Change | AdvancedHunting-IdentityDirectoryEvents | Under Consideration | |
 
 
 Schema reference: https://docs.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-schema-tables?view=o365-worldwide
