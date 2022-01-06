@@ -249,6 +249,8 @@ So how does this data look like when it's ingested into Splunk? Prettified, of c
 }
 ```
 
+### Summary for Malware DM
+
 ```json
 {
   "action": "unknown",
@@ -262,6 +264,45 @@ So how does this data look like when it's ingested into Splunk? Prettified, of c
   "signature": "Populf",
   "time": 1631867656.623709,
   "vendor_product": "Microsoft Defender for Endpoint"
+}
+```
+
+### Summary for Email DM
+
+```json
+{
+  "action": "delivered",
+  "file_hash": [
+    "2e485c7828aa33c8d80539b0d7f0a694a29de6127f5545d467d06310531ce599",
+    "e094271bec517651dced23a19f150a1ec9be817f349278c7b9148ced53b20edd"
+  ],
+  "file_name": [
+    "2022-01-01 11.00.10.jpg",
+    "DSP-1.2.2-patch01-Admin-Upgrade.pdf"
+  ],
+  "file_size": [
+    186002,
+    4025543
+  ],
+  "filter_action": "null",
+  "internal_message_id": "4feeacb0-f1c4-4769-69df-08d9d0f76bb4",
+  "message_id": "<CAD9ghe884qGEKNZ7QxuRCiADbNtpP4FN-KiCnc6Jzo2WusGsEA@mail.gmail.com>",
+  "message_info": "null",
+  "recipient": [
+    "denver@spitz.life"
+  ],
+  "recipient_count": 1,
+  "recipient_domain": [
+    "spitz.life"
+  ],
+  "signature": "No action taken",
+  "signature_extra": "null",
+  "signature_id": "null",
+  "src": "216.71.154.95",
+  "src_user": "mbjerkeland@splunk.com",
+  "src_user_domain": "splunk.com",
+  "subject": "Fwd: Greetings from Norway",
+  "time": 1641461542
 }
 ```
 ## Support
