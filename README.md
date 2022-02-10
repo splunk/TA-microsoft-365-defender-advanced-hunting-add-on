@@ -20,7 +20,7 @@ My advice: Use both Microsoft Defender Advanced Hunting Add-on and Microsoft 365
 
 #### [TA for Defender ATP hunting API](https://splunkbase.splunk.com/app/4623/#/details)
 * The above uses REST API to pull similar data at intervals, and the REST API is rate limited
-* The above is not CIM compliant
+* The above is not CIM compliant.
 
 My advice: You should not need this TA if you are using Microsoft Defender Advanced Hunting Add-on for Splunk.
 
