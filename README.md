@@ -27,9 +27,40 @@ My advice: You should not need this TA if you are using Microsoft Defender Advan
 
 ## Installation
 
-1. Configure Microsoft Defender for Endpoint to stream Advanced Hunting events to an Azure Event Hub:
+1. Configure Microsoft Defender for Endpoint to stream Advanced Hunting events to an Azure Event Hub
+
+   **General Notes**
    *  https://docs.microsoft.com/en-us/microsoft-365/security/defender-endpoint/raw-data-export-event-hub?view=o365-worldwide
    *  Use a separate Event Hub Name for Advanced Hunting data. Don't mix this data with other types of data. Failing to do so will render this Add-on useless
+
+   **Detailed Configuration Instructions**
+   
+   ![Screenshot 1](/appserver/static/screenshot1.png)
+   
+   ![Screenshot 2](/appserver/static/screenshot2.png)
+   
+   ![Screenshot 3](/appserver/static/screenshot3.png)
+   
+   You will need your event hub name and resource id to fill in the details below:
+
+   ![Screenshot 4](/appserver/static/screenshot4.png)
+   
+   To retrieve the details go to https://portal.azure.com
+   
+   ![Screenshot 5](/appserver/static/screenshot5.png)
+   
+   ![Screenshot 6](/appserver/static/screenshot6.png)
+   
+   ![Screenshot 7](/appserver/static/screenshot7.png)
+   
+   Now that we have retrieved the event hub name and resource id, let's export our data to Event Hub:
+   
+   ![Screenshot 8](/appserver/static/screenshot8.png)
+   
+   Ensure all Events Types are checked below:
+   
+   ![Screenshot 9](/appserver/static/screenshot9.png)
+   
 
 2. Install this add-on on your Search Heads, Indexers and Heavy Forwarders (if part of your data collection topology)
 
