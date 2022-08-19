@@ -87,7 +87,7 @@ Data Model Compatibility:
 | MS Defender for Endpoint | Email | AdvancedHunting-EmailEvents <br/>AdvancedHunting-EmailAttachmentInfo | Completed | Enable saved search **Summary - Defender Advanced Hunting Email Summary** |
 | MS Defender for Endpoint | Malware | AdvancedHunting-AlertInfo <br/>AdvancedHunting-AlertEvidence | Completed | Enable saved search **Summary - Defender Advanced Hunting Malware Summary** |
 | MS Defender for Endpoint | Authentication | AdvancedHunting-IdentityLogonEvents <br/>AdvancedHunting-DeviceLogonEvents | Under Consideration | |
-| MS Defender for Endpoint | Change | AdvancedHunting-IdentityDirectoryEvents | Under Consideration | |
+| MS Defender for Endpoint | Change | AdvancedHunting-IdentityDirectoryEvents <br/>AdvancedHunting-DeviceEvents | Under Consideration <br/>DeviceEvents (USB device insertion etc) | |
 
 
 Schema reference: https://docs.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-schema-tables?view=o365-worldwide
