@@ -349,7 +349,7 @@ Authored by Mikael Bjerkeland (mbjerkeland@splunk.com).
 
 ## Copyright
 
-Copyright 2021 Splunk Inc.
+Copyright 2021-2022 Splunk Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
