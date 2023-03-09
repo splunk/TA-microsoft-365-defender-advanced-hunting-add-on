@@ -339,6 +339,12 @@ This add-on is provided without official support, but is supported on a best-eff
 Contributions and pull requests are more than welcome.   
 Git repository: https://github.com/splunk/TA-microsoft-365-defender-advanced-hunting-add-on
 
+## TODO
+
+* Map DeviceInfo and DeviceNetworkInfo to Network_Resolution.DHCP dataset
+* Custom dashboard for DeviceInfo and DeviceNetworkInfo
+* A&I integration from DeviceInfo and DeviceNetworkInfo?
+
 ## Contact
 
 Authored by Mikael Bjerkeland (mbjerkeland@splunk.com).  
@@ -347,6 +353,7 @@ Authored by Mikael Bjerkeland (mbjerkeland@splunk.com).
 * Mikael Bjerkeland (Splunk)
 * Thomas Hillesøy (Sens Consulting)
 * Denver Spitz (Splunk)
+* Jamie Windley (Splunk)
 
 ## Copyright
 
