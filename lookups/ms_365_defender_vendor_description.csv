@@ -1,4 +1,4 @@
-"ActionType","Description"
+"ActionType","vendor_description"
 "AccountCheckedForBlankPassword","An account was checked for a blank password."
 "AntivirusDefinitionsUpdated","Security intelligence updates for Windows Defender Antivirus were applied successfully."
 "AntivirusDefinitionsUpdateFailed","Security intelligence updates for Windows Defender Antivirus were not applied."
