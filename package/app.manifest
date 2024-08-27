@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.0.0",
+  "schemaVersion": "2.0.0",
   "info": {
     "title": "Microsoft Defender for Endpoint Advanced Hunting Add-on for Splunk",
     "id": {
@@ -15,17 +15,20 @@
       }
     ],
     "releaseDate": null,
-    "description": "",
+    "description": "Microsoft Defender for Endpoint Advanced Hunting Add-on for Splunk",
     "classification": {
-      "intendedAudience": null,
-      "categories": [],
-      "developmentStatus": null
+      "intendedAudience": "IT",
+      "categories": [
+        "Security, Fraud & Compliance",
+        "IT Operations"
+      ],
+      "developmentStatus": "Production/Stable"
     },
     "commonInformationModels": null,
     "license": {
-      "name": null,
-      "text": null,
-      "uri": null
+      "name": "Apache License, Version 2.0",
+      "text": "LICENSE",
+      "uri": "http://www.apache.org/licenses/LICENSE-2.0"
     },
     "privacyPolicy": {
       "name": null,
@@ -33,21 +36,20 @@
       "uri": null
     },
     "releaseNotes": {
-      "name": null,
-      "text": null,
-      "uri": null
+      "name": "README.md",
+      "text": "README.md",
+      "uri": "https://splunkbase.splunk.com/app/5518"
     }
   },
-  "dependencies": {
-  },
-  "tasks": [],
-  "inputGroups": {
-  },
-  "incompatibleApps": {
-  },
-  "platformRequirements": {
-    "splunk": {
-      "Enterprise": "*"
-    }
-  }
+  "dependencies": null,
+  "tasks": null,
+  "inputGroups": null,
+  "incompatibleApps": null,
+  "platformRequirements": null,
+  "supportedDeployments": [
+    "*"
+  ],
+  "targetWorkloads": [
+    "*"
+  ]
 }
