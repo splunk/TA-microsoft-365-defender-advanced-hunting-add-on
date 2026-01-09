@@ -3,7 +3,7 @@ on: workflow_dispatch
 
 jobs:
    publish:
-      uses: diogofgm/splunkbase-release-action/.github/workflows/splunkbase-release-action.yml@v0.0.3
+      uses: diogofgm/splunkbase-release-action/.github/workflows/splunkbase-release-action.yml@v0.0.6
       secrets:
          SPLUNKBASE_USER: ${{ secrets.SPLUNKBASE_USER }}
          SPLUNKBASE_PASSWORD: ${{ secrets.SPLUNKBASE_PASSWORD }}
